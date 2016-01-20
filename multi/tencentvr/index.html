@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tencent腾讯VR</title>
+		<script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body,div,p{
+				margin: 0;
+			}
+			body{
+				text-align: center;
+				color: #fff;
+			}
+			.pages-1 {
+			  height: 800px;
+			  background: url('img/star.png');
+			  background-color: #000;
+			  position: relative;
+			}
+			.pages-1 .txt{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+				-moz-transform: translate(-50%,-50%);
+				-ms-transform: translate(-50%,-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+	    	$(document).ready(init);
+		
+		    var Data = {
+		        startX: 0,
+		        startY: 0,
+		        currentX: 0,
+		        currentY: 0,
+		        locked: false //是否设值完成, 用于完美控制不同浏览器事件解析差异
+		    };
+		    function init() {
+		        addListener();
+		    }
+		    function addListener() {
+		        $(".pages-1").mouseover(doMouseOver).mousemove(doMouseMove);
+		    }
+		    function doMouseOver(e) {
+		        Data.startX = e.pageX - Data.currentX;
+		        Data.startY = e.pageY - Data.currentY;
+		        Data.locked = true;
+		    }
+		    function doMouseMove(e) {
+		        if (Data.locked != true) {
+		            return false;
+		        }
+		        Data.currentX = -(e.pageX - Data.startX);
+		        Data.currentY = -(e.pageY - Data.startY);
+				$(".pages-1").css({ "background-position": Data.currentX + "px "+ Data.currentY + "px" });
+		    }
+		    function doMouseOut(e) {
+		        locked = false;
+		    }
+		</script>
+		<div class="pages-1">
+			<div class="txt">
+				<h1>未来已来</h1>
+				<h2>The Future is Now</h2>
+			</div>
+		</div>
+		<p>
+			来源：<a href="http://vr.tencent.com/">Tencent腾讯VR</a>
+		</p>
+	</body>
+</html>

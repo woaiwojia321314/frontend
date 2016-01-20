@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.startScreen{
+			position: relative;
+			margin: 100px auto;
+			width: 1000px;
+		}
+		.baseImage{
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
+		.overlayImage{
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			var timer = null;
+			
+			$("area[data-imageId='01']").hover(function(){
+				timer = setTimeout(function(){
+					$("#tulux_01").animate({opacity:1},500);
+				},500);
+			},function(){
+				clearTimeout(timer);
+				$("#tulux_01").animate({opacity:0},500);
+			});
+			$("area[data-imageId='02']").hover(function(){
+				$("#tulux_02").animate({opacity:1},500);
+			},function(){
+				$("#tulux_02").animate({opacity:0},500);
+			});
+			$("area[data-imageId='03']").hover(function(){
+				$("#tulux_03").animate({opacity:1},500);
+			},function(){
+				$("#tulux_03").animate({opacity:0},500);
+			});
+			$("area[data-imageId='04']").hover(function(){
+				$("#tulux_04").animate({opacity:1},500);
+			},function(){
+				$("#tulux_04").animate({opacity:0},500);
+			});
+			$("area[data-imageId='05']").hover(function(){
+				$("#tulux_05").animate({opacity:1},500);
+			},function(){
+				$("#tulux_05").animate({opacity:0},500);
+			});
+			$("area[data-imageId='06']").hover(function(){
+				$("#tulux_06").animate({opacity:1},500);
+			},function(){
+				$("#tulux_06").animate({opacity:0},500);
+			});
+			$("area[data-imageId='07']").hover(function(){
+				$("#tulux_07").animate({opacity:1},500);
+			},function(){
+				$("#tulux_07").animate({opacity:0},500);
+			});
+			$("area[data-imageId='08']").hover(function(){
+				$("#tulux_08").animate({opacity:1},500);
+			},function(){
+				$("#tulux_08").animate({opacity:0},500);
+			});
+			$("area[data-imageId='09']").hover(function(){
+				$("#tulux_09").animate({opacity:1},500);
+			},function(){
+				$("#tulux_09").animate({opacity:0},500);
+			});
+			$("area[data-imageId='10']").hover(function(){
+				$("#tulux_10").animate({opacity:1},500);
+			},function(){
+				$("#tulux_10").animate({opacity:0},500);
+			});
+			$("area[data-imageId='11']").hover(function(){
+				$("#tulux_11").animate({opacity:1},500);
+			},function(){
+				$("#tulux_11").animate({opacity:0},500);
+			});
+			$("area[data-imageId='12']").hover(function(){
+				$("#tulux_12").animate({opacity:1},500);
+			},function(){
+				$("#tulux_12").animate({opacity:0},500);
+			});
+			$("area[data-imageId='13']").hover(function(){
+				$("#tulux_13").animate({opacity:1},500);
+			},function(){
+				$("#tulux_13").animate({opacity:0},500);
+			});
+			$("area[data-imageId='14']").hover(function(){
+				$("#tulux_14").animate({opacity:1},500);
+			},function(){
+				$("#tulux_14").animate({opacity:0},500);
+			});
+		});
+	</script>
+
+<body>
+
+	<div class="pageOutline">
+
+		<div id="box">
+			<header id="header">
+				<div class="startScreen">
+					<img class="baseImage" src="3d-image/tulux_15.jpg" width="1000" height="630" usemap="#register" alt="" />
+					<img class="overlayImage" id="tulux_01" src="3d-image/tulux_01.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_02" src="3d-image/tulux_02.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_03" src="3d-image/tulux_03.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_04" src="3d-image/tulux_04.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_05" src="3d-image/tulux_05.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_06" src="3d-image/tulux_06.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_07" src="3d-image/tulux_07.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_08" src="3d-image/tulux_08.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_09" src="3d-image/tulux_09.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_10" src="3d-image/tulux_10.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_11" src="3d-image/tulux_11.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_12" src="3d-image/tulux_12.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_13" src="3d-image/tulux_13.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					<img class="overlayImage" id="tulux_14" src="3d-image/tulux_14.jpg" width="1000" height="630" usemap="#register" alt="" style="opacity: 0;">
+					
+					<map name="register">
+						<area shape="rect" href="" data-imageId="07" rel="#cat07" coords="75,142,140,175" alt="Ceiling mounted luminaires - Surface">
+						<area shape="rect" href="" data-imageId="07" rel="#cat07" coords="100,110,175,142" alt="Ceiling mounted luminaires - Surface">
+						<area shape="rect" href="" data-imageId="07" rel="#cat07" coords="282,137,346,168" alt="Ceiling mounted luminaires - Surface">
+						<area shape="rect" href="" data-imageId="07" rel="#cat07" coords="419,115,487,152" alt="Ceiling mounted luminaires - Surface">
+						<area shape="rect" href="" data-imageId="07" rel="#cat07" coords="480,152,547,185" alt="Ceiling mounted luminaires - Surface">
+						<area shape="poly" href="" data-imageId="05" rel="#cat06" coords="798,203,939,162,974,260,949,263,925,231,829,250" alt="Ceiling mounted luminaires - Recessed">
+						<area shape="poly" href="" data-imageId="02" rel="#cat02" coords="510,0,570,0,555,100,0,100,0,70,505,70" alt="System luminaires">
+						<area shape="poly" href="" data-imageId="10" rel="#cat10" coords="346,251,409,253,409,275,368,273,368,352,389,352,389,372,346,372" alt="Standard lamps and desk luminaires">
+						<area shape="poly" href="" data-imageId="12" rel="#cat12" coords="294,205,329,209,329,342,310,342,310,229,294,225" alt="Projectors">
+						<area shape="poly" href="" data-imageId="12" rel="#cat12" coords="399,216,434,219,434,331,414,331,414,238,399,235" alt="Projectors">
+						<area shape="poly" href="" data-imageId="12" rel="#cat12" coords="482,225,515,227,515,285,497,292,497,244,482,242" alt="Projectors">
+						<area shape="poly" href="" data-imageId="13" rel="#cat13" coords="385,306,414,302,414,347,385,354" alt="Outdoor luminaires">
+						<area shape="poly" href="" data-imageId="13" rel="#cat13" coords="577,302,609,308,609,335,577,329" alt="Outdoor luminaires">
+						<area shape="poly" href="" data-imageId="11" rel="#cat13" coords="529,241,561,241,561,255,577,255,577,357,515,357,515,255,529,255" alt="Emergency luminaires">
+						<area shape="poly" href="" data-imageId="04" rel="#cat04" coords="579,247,625,228,625,261,579,274" alt="Spotlights and busbar systems">
+						<area shape="poly" href="" data-imageId="01" rel="#cat01" coords="183,444,387,426,412,436,433,460,433,537,419,559,392,573,236,596,210,594,193,582,183,561" alt="LED">
+						<area shape="poly" href="" data-imageId="08" rel="#cat08" coords="210,244,281,253,277,282,208,274" alt="Wall mounted luminaires - Surface">
+						<area shape="rect" href="" data-imageId="06" rel="#cat06" coords="5,245,33,267" alt="Wall mounted luminaires - Recessed">
+						<area shape="rect" href="" data-imageId="06" rel="#cat06" coords="99,299,129,321" alt="Wall mounted luminaires - Recessed">
+						<area shape="rect" href="" data-imageId="06" rel="#cat06" coords="213,372,243,391" alt="Wall mounted luminaires - Recessed">
+						<area shape="rect" href="" data-imageId="06" rel="#cat06" coords="335,372,365,391" alt="Wall mounted luminaires - Recessed">
+						<area shape="poly" href="" data-imageId="09" rel="#cat09" coords="677,0,795,0,801,222,801,303,771,303,771,332,699,332,699,309,672,309,672,213" alt="Pendant luminaires">
+						<area shape="poly" href="" data-imageId="03" rel="#cat07" coords="801,250,944,232,945,289,801,296" alt="Single luminaires - Surface,Single luminaires - Recessed">
+					</map>
+				</div>
+			</header>
+		</div>
+	</div>
+	<script type="text/javascript">
+	
+		$("area[data-imageId='07']").mouseover(function (){
+
+			$(".baseImage").addClass("show07");
+//			$(".baseImage").prop("src","3d-image/tulux_07.jpg"); 
+//			$(".baseImage").fadeIn(3000);
+		});
+		
+		$("area[data-imageId='07']").mouseout(function (){
+			$(".baseImage").prop("src","3d-image/tulux_15.jpg");
+//			$(".baseImage").fadeIn(3000);
+		});
+		
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  color: #C0C0C0;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
+  box-shadow: 0px;
+}
+
+body {
+  background-color: pink;
+}
+
+#container {
+  height: 300px;
+  margin-top: 10%;
+}
+
+.entypo-search:before {
+  position: absolute;
+  top: 0.4em;
+  left: 0px;
+}
+
+#form {
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 13px;
+  overflow: hidden;
+  position: absolute;
+  height: 30px;
+  right: 50%;
+  -webkit-transition: width .55s ease;
+  -moz-transition: width .55s ease;
+  -ms-transition: width .55s ease;
+  -o-transition: width .55s ease;
+  transition: width .55s ease;
+}
+
+form {
+  position: relative;
+}
+
+input {
+  width: 0px;
+  height: 25px;
+  font-size: 15px;
+  margin-left: 30px;  
+  /* margin-top: 3px; */
+  line-height: 30px;
+}
+
+.entypo-search {
+  position: absolute;
+  top: 20%;
+}
+
+#form:hover {
+  width: 200px;
+}
+
+#form:hover form input {
+  width: 200px;
+}
+
+#form form input:focus, 
+#form form input:active{
+  outline:none;
+  width: 300px;
+}
