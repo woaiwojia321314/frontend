@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>box-shadow</title>
+		<style type="text/css">
+			/* box-shadow: x y r blur-r color; 
+			 * x水平方向，+右移，-左移；
+			 * y垂直方向，+下移，-上移；
+			 * r阴影半径，blur-r模糊半径，color阴影颜色
+			 * */
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.shadow{
+				width: 5em;
+				height: 5em;
+				margin: 1em;
+				background: green;
+			}
+			.shadow.one{
+				box-shadow: 0 5px 5px -2px rgba(255,0,0,.5);
+			}
+			.shadow.two{
+				box-shadow: 5px 0 5px -2px rgba(255,0,0,.5),
+            				-5px 0 5px -2px rgba(255,0,0,.5);
+			}
+			.shadow.three{
+				box-shadow: 5px 0 5px -2px rgba(255,0,0,.5),
+            				-5px 0 5px -2px rgba(255,0,0,.5),
+            				0 5px 5px -2px rgba(255,0,0,.5);
+			}
+			.shadow.full{
+				box-shadow: 5px 0 5px -2px rgba(255,0,0,.5),
+            				-5px 0 5px -2px rgba(255,0,0,.5),
+            				0 5px 5px -2px rgba(255,0,0,.5),
+            				0 -5px 5px -2px rgba(255,0,0,.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shadow one"></div>
+		<div class="shadow two"></div>
+		<div class="shadow three"></div>
+		<div class="shadow full"></div>
+	</body>
+</html>

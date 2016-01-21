@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网站的retina(视网膜)优化(二)</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 18px;
+				line-height: 1.5;
+				color: #333;
+				text-align: center;
+			}
+			h1{
+				font-size: 24px;
+			}
+			.old{
+				background-image: url('img/logo.jpg'); 
+		        background-size: 425px 195px;
+			    width: 425px;
+			    height: 195px;
+			}
+			.test {
+		        background-image: url('img/logo.jpg'); 
+		        background-image: -webkit-image-set(url('img/logo.jpg') 1x,url('img/logo@2x.jpg') 2x);
+		        background-size: 425px 195px;
+			    width: 425px;
+			    height: 195px;
+		    }
+		    .center{
+		    	margin: 0 auto;
+		    }
+		</style>
+	</head>
+	<body>
+		<h1>网站的retina(视网膜)优化（二）</h1>
+		<p>-webkit-image-set</p>
+		<div class="old center"></div>
+		<div class="test center"></div>
+	</body>
+</html>

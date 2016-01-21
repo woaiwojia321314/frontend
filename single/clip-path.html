@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css3-图形裁剪</title>
+		<style type="text/css">
+			body{
+				background: #9F9F9F;
+			}
+			.clipClass{
+				background: #3CB4AE;
+				width: 100px;
+				height: 100px;
+				margin: 5px 5px;
+				float: left;
+				line-height: 100px;
+				text-align: center;
+				transition: all 1s ease-out;
+				-webkit-transition: all 1s ease-out;
+			}
+			.clip-trigon{
+				clip-path: polygon(0 100%, 50% 0, 100% 100%);
+				-webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%);
+			}
+			.clip-circle{
+				clip-path: circle(50% at 50% 50%);
+				-webkit-clip-path: circle(50% at 50% 50%);
+			}
+			.clip-ellipse{
+				clip-path: ellipse(30% 20% at 50% 50%);
+				-webkit-clip-path: ellipse(50% 30% at 50% 50%);
+			}
+			.clip-radius{
+				clip-path: inset(10% 10% round 10% 10%);
+				-webkit-clip-path: inset(10% 10% round 10% 10%);
+			}
+			.clip-radius2{
+				clip-path: inset(25% 0 round 0 25%);
+				-webkit-clip-path: inset(25% 0 round 0 25%);
+			}
+			.clip-radius3{
+				clip-path: inset(25% 0% round 25% 0%);
+				-webkit-clip-path: inset(25% 0% round 25% 0%);
+			}
+			.clip-polygon{
+				clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0 38%, 37% 38%);
+				-webkit-clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0 38%, 37% 38%);
+			}
+			.clip-polygon2{
+				clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+				-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+			}
+			.animateClass:hover {
+				clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+			  	-webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+			}
+			.animateClass2:hover {
+				clip-path: polygon(0% 0%, 30% 0%, 50% 20%, 70% 0%, 100% 0%, 100% 100%, 70% 100%, 50% 80%, 30% 100%, 0% 100%);
+			  	-webkit-clip-path: polygon(0% 0%, 30% 0%, 50% 20%, 70% 0%, 100% 0%, 100% 100%, 70% 100%, 50% 80%, 30% 100%, 0% 100%);
+			}
+			/*相同的顶点数，动画才会生效*/
+			.animateClass3{
+				transition: clip-path 0.6s;
+				transition: -webkit-clip-path 0.6s;
+				clip-path: polygon(0% 0%, 50% 50%, 100% 100%, 0% 100%);
+				-webkit-clip-path: polygon(0% 0%, 50% 50%, 100% 100%, 0% 100%);
+			}
+			.animateClass3:hover{
+				background: #333333;
+				clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+				-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clipClass clip-trigon">三角形</div>
+		<div class="clipClass clip-circle">圆形</div>
+		<div class="clipClass clip-ellipse">椭圆</div>
+		<div class="clipClass clip-radius">圆角</div>
+		<div class="clipClass clip-radius2">圆角2</div>
+		<div class="clipClass clip-radius3">圆角3</div>
+		<div class="clipClass clip-polygon">五角星</div>
+		<div class="clipClass clip-polygon2">提示框</div>
+		<div class="clipClass animateClass">×</div>
+		<div class="clipClass animateClass2">work</div>
+		<div class="clipClass animateClass3">三角形变四边形动画</div>
+	</body>
+</html>
