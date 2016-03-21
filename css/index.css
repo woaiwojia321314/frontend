@@ -1,11 +1,11 @@
 body{background-color: #f4f4f4;}
 header .container-fluid{
 	text-align: center;
-	background: linear-gradient(left, #514C86, #994C4C);
-	background: -webkit-o-gradient(left, #514C86, #994C4C);
-	background: -webkit-ms-gradient(left, #514C86, #994C4C);
-	background: -webkit-moz-gradient(left, #514C86, #994C4C);
+	background: -o-linear-gradient(left, #514C86, #994C4C);
+	background: -ms-linear-gradient(left, #514C86, #994C4C);
+	background: -moz-linear-gradient(left, #514C86, #994C4C);
 	background: -webkit-linear-gradient(left, #514C86, #994C4C);
+	background: linear-gradient(left, #514C86, #994C4C);
 }
 header .container-fluid h1{color: #000;}
 .index .row .thumbnail{
