@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>斑马条纹背景的文本行</title>
+    <style>
+        pre {
+            padding: .5em;
+            line-height: 1.5;
+            background: #eee;
+            background-image: -webkit-linear-gradient(rgba(120,0,0,.1) 50%, transparent 0);
+            background-image: -moz-linear-gradient(rgba(120,0,0,.1) 50%, transparent 0);
+            background-image: -ms-linear-gradient(rgba(120,0,0,.1) 50%, transparent 0);
+            background-image: -o-linear-gradient(rgba(120,0,0,.1) 50%, transparent 0);
+            background-image: linear-gradient(rgba(120,0,0,.1) 50%, transparent 0);
+            background-size: auto 3em;/*行高的两倍*/
+            background-origin: content-box;
+            font-family: Consolas, Monaco, monospace;
+        }
+
+        code { font: inherit }
+    </style>
+</head>
+<body>
+<pre>
+    <code>while (true) {
+    var d = new Date();
+    if (d.getDate()==1 &amp;&amp;
+    d.getMonth()==3) {
+    alert("TROLOLOL");
+    }
+    }</code>
+</pre>
+</body>
+</html>

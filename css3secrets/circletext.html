@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>环形文本</title>
+    <style>
+        .circular {
+            margin: 5em auto;
+            width: 20em;
+            height: 20em;
+        }
+        .circular svg {
+            display: block;
+            overflow: visible;
+        }
+        .circular path { fill: none; }
+    </style>
+</head>
+<body>
+<div class="circular">
+    <svg viewBox="0 0 100 100">
+        <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+        <text>
+            <textPath xlink:href="#circle">
+                circular reasoning works because
+            </textPath>
+        </text>
+    </svg>
+</div>
+<!--http://www.w3cplus.com/css3/css-secrets/circular-text.html-->
+</body>
+</html>
