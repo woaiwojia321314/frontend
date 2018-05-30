@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>沿着路径的动画</title>
+    <style>
+        
+        @keyframes spin{
+          from{
+            /*transform: rotate(0turn) translateY(-150px) translateY(50%) rotate(1turn);*/
+            transform: rotate(0turn) translateY(-150px) translateY(25px) rotate(1turn);
+          }
+          to {
+            /*transform: rotate(1turn) translateY(-150px) translateY(50%) rotate(0turn);*/
+            transform: rotate(1turn) translateY(-150px) translateY(25px) rotate(0turn);
+          }
+        }
+        .avatar {
+            animation: spin 3s infinite linear;
+        }
+        .avatar {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: calc(50% - 25px) auto 0;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .path {
+            width: 300px; 
+            height: 300px;
+            padding: 20px;
+            margin: 100px auto;
+            border-radius: 50%;
+            background: #fb3;
+        }
+    </style>
+</head>
+<body>
+    <div class="path">
+        <img src="img/logo_w3cplus.png"  class="avatar"/>
+    </div>
+</body>
+</html>

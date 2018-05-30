@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>渐变</title>
+	<style>
+		/* 禁用iPhone中Safari的字号自动调整 */
+		html {
+		  -webkit-text-size-adjust: 100%;
+		  -ms-text-size-adjust: 100%;
+		  font-size: 62.5%;
+		}
+		body{
+			width: 100%;
+		    background: #f5f5f5;
+		    font-family: "Sans Noto", "Hiragino Sans GB", Arial, Helvetica, "微软雅黑", sans-serif;
+		    font-size: 1.4rem;
+		    line-height: 1.5rem;
+		    color: #333;
+		}
+		.clear-fix:after {
+		  content: "";
+		  display: block;
+		  visibility: hidden;
+		  height: 0;
+		  clear: both;
+		}
+
+		.clear-fix {
+		  zoom: 1;
+		}
+		/*custom css*/
+		/*渐变的多种写法*/
+		/*色标：颜色和位置*/
+		.linear-gradient{
+			margin: .5rem;
+			float: left;
+			width: 100px;
+			height: 100px;
+
+			background: linear-gradient(red,blue);
+		}
+		.linear-gradient.m1{
+			background: linear-gradient(red,green,blue);
+		}
+		.linear-gradient.m2{
+			background: linear-gradient(red,green 30%,yellow 70%,blue);
+		}
+		.linear-gradient.m3{
+			background: linear-gradient(green 30%,yellow 70%);
+		}
+		.linear-gradient.m4{
+			background: linear-gradient(45deg,#000 25%, transparent 25%),
+			linear-gradient(-45deg,#000 25%, transparent 25%),
+			linear-gradient(135deg,#000 25%, transparent 25%),
+			linear-gradient(-135deg,#000 25%, transparent 25%);
+			/*background-size: 20px 20px;*/
+		}
+		.linear-gradient.m5{
+			background: linear-gradient(45deg,#000 25%, transparent 25%),
+			linear-gradient(-45deg,#000 25%, transparent 25%),
+			linear-gradient(45deg,transparent 75%,#000 75%),
+			linear-gradient(-45deg,transparent 75%,#000 75%);
+			/*background-size: 20px 20px;*/
+		}
+		.linear-gradient.m6{
+			background: repeating-linear-gradient(#fff,#fff 9px, #999 10px);
+		}
+		.linear-gradient.m7{
+			background: linear-gradient(180deg,#fff 50%, #000 50%);
+    		background-size: 100% 20px;
+		}
+		.linear-gradient.m8{
+			background: #fff;
+			background: linear-gradient(0deg,rgba(200,0,0,.5) 50%, transparent 0),
+			linear-gradient(90deg,rgba(200,0,0,.5) 50%, transparent 0);
+    		background-size: 20px 20px;
+		}
+		/**
+ * Parallelograms — with extra HTML element
+ */
+ 
+.button {
+	position: relative;
+	display: inline-block;
+	padding: .5em 1em;
+	border: 0; margin: .5em;
+	background: transparent;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 200%/1 sans-serif;
+}
+
+.button::before {
+	content: ''; /* To generate the box */
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
+	background: #58a;
+	transform: skew(45deg);
+}
+
+}
+	</style>
+</head>
+<body>
+	<div class="linear-gradient">两色（平分）</div>
+	<div class="linear-gradient m1">多色（未指定色标位置时，平分）</div>
+	<div class="linear-gradient m2">多色（指定色标位置时，按指定分配）</div>
+	<div class="linear-gradient m3">多色</div>
+	<div class="linear-gradient m4"></div>
+	<div class="linear-gradient m5"></div>
+	<div class="linear-gradient m6">信纸</div>
+	<div class="linear-gradient m7">斑马线</div>
+	<div class="linear-gradient m8">桌布</div>
+
+	<a href="#yolo" class="button"><div>Click me</div></a>
+	<button class="button"><div>Click me</div></button>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>文本省略号</title>
+    <style>
+        /*
+        *reset css
+        */
+        /* 禁用iPhone中Safari的字号自动调整 */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-size: 62.5%;
+        }
+        body{
+            width: 100%;
+            background: #f5f5f5;
+            font-family: "Sans Noto", "Hiragino Sans GB", Arial, Helvetica, "微软雅黑", sans-serif;
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+            color: #333;
+        }
+        .clear-fix:after {
+            content: "";
+            display: block;
+            visibility: hidden;
+            height: 0;
+            clear: both;
+        }
+
+        .clear-fix {
+            zoom: 1;
+        }
+        /**custom css**/
+        .ellipsis{
+            color: #ff3c1d;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            padding: .1em;
+            border: 1px solid #999;
+
+            width: 20em;
+            overflow: hidden;
+            white-space: nowrap;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+<section class="wrapper">
+    <div class="con">
+		
+    </div>
+    <div class="demo">
+        <p class="ellipsis">
+            Muddy water is best cleared by leaving it alone. 泥泞的水最好通过离开它来清除。
+        </p>
+    </div>
+</section>
+</body>
+</html>

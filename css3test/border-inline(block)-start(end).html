@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>readme</title>
+    <style>
+        /*
+        * reset.css
+        */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-size: 62.5%;
+        }
+        body {
+            width: 100%;
+            font-family: "Sans Noto", "Hiragino Sans GB", Arial, Helvetica, "微软雅黑", sans-serif;
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+            color: #000;
+        }
+
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        abbr, img, object, a img, :link img, :visited img, a object, :link object, :visited object {
+            border: 0;
+        }
+        .clear-fix:after {
+            content: "";
+            display: block;
+            visibility: hidden;
+            height: 0;
+            clear: both;
+        }
+
+        .clear-fix {
+            zoom: 1;
+        }
+        /*custom css*/
+        section{
+            display: block;
+        }
+        div {
+          background-color: yellow;
+          width: 220px;
+          height: 220px;
+          margin: 1em;
+          float: left;
+        }
+
+        p.color{
+            border: 10px solid blue;
+            border-inline-start-color: #000;
+            border-inline-end-color: #58a;
+            border-block-start-color: green;
+            border-block-end-color: red;
+        }
+        p.full{
+            border: 10px solid blue;
+            border-inline-start: 6px dashed #000;
+            border-inline-end: 10px dotted #58a;
+            border-block-start: 4px solid green;
+            border-block-end:8px double red;
+        }
+
+        .eg1 {
+            writing-mode: horizontal-tb;
+        }
+        .eg2 {
+            writing-mode: vertical-lr;
+        }
+        .eg3 {
+            writing-mode: vertical-rl;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="clear-fix">
+        <div>
+          <p class="color eg1"><b>line: left -> right(水平),<br>block: top -> bottom </b><br>Example text1 这只是个例子而已</p>
+        </div>
+        <div>
+          <p class="color eg2"><b>line: top -> bottom(垂直),<br>block: left -> right </b><br>Example text2 这只是个例子而已</p>
+        </div>
+        <div>
+          <p class="color eg3"><b>line: top -> bottom(垂直),<br>block: right -> left </b><br>Example text3 这只是个例子而已</p>
+        </div> 
+    </section>
+    <section class="clear-fix">
+        <div>
+          <p class="full eg1"><b>line: left -> right(水平),<br>block: top -> bottom </b><br>Example text1 这只是个例子而已</p>
+        </div>
+        <div>
+          <p class="full eg2"><b>line: top -> bottom(垂直),<br>block: left -> right </b><br>Example text2 这只是个例子而已</p>
+        </div>
+        <div>
+          <p class="full eg3"><b>line: top -> bottom(垂直),<br>block: right -> left </b><br>Example text3 这只是个例子而已</p>
+        </div>
+    </section>
+</body>
+</html>

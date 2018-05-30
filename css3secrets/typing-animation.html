@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>打字动画</title>
+    <style>
+        
+        @keyframes typing{
+            from{width: 0;}
+        }
+        @keyframes caret{
+            50%{border-color: transparent;}
+        }
+        h1{
+            color: gold;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 15ch;/*1ch=1字母o宽度*/
+            border-right: .05em solid;/*未指定颜色时会自动获取文本的颜色*/
+
+            animation: typing 6s steps(15),
+            caret 1s steps(1) infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS is awesome!</h1>
+</body>
+</html>

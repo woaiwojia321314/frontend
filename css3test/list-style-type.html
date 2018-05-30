@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>list-style-type</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <style>
+    /*
+    *reset css
+    */
+    /* 禁用iPhone中Safari的字号自动调整 */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-size: 62.5%;
+    }
+    body{
+        width: 100%;
+        background: #f5f5f5;
+        font-family: "Sans Noto", "Hiragino Sans GB", Arial, Helvetica, "微软雅黑", sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+        color: #333;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .clear-fix:after {
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+    }
+
+    .clear-fix {
+        zoom: 1;
+    }
+    /**custom css**/
+    ul{
+      margin: 1em 5em;
+    }
+    .symbols1{
+      list-style-type: symbols('*' '\2020' '\2021' '\A7');
+    }
+    .symbols2{
+      list-style-type: symbols(cyclic '*' '\2020' '\2021' '\A7');
+    }
+  </style>
+</head>
+<body>
+  <h3>自定义的值</h3>
+  <div class="demo-define"></div>
+  <h3>symbols定义的值</h3>
+  <div class="demo-symbols">
+    <ul class="symbols1">
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+    </ul>
+    <ul class="symbols2">
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+      <li>symbols定义的值</li>
+    </ul>
+  </div>
+  <h3>常值</h3>
+  <div class="demo-constant"></div>
+  <script>
+    $(function(){
+
+      //scools
+      var arr = ['none','circle','disc','square','armenian','cjk-ideographic','decimal','decimal-leading-zero','georgian','hebrew','hiragana','hiragana-iroha','katakana','katakana-iroha','lower-alpha','lower-greek','lower-latin','lower-roman','upper-alpha','upper-greek','upper-latin','upper-roman'];
+      //css3 test
+      var arr2 = ['disclosure-closed','disclosure-open','cjk-decimal','cjk-ideographic','hiragana','katakana','hiragana-iroha','katakana-iroha','japanese-informal','japanese-formal','korean-hangul-formal','korean-hanja-informal','korean-hanja-formal','simp-chinese-informal','simp-chinese-formal','trad-chinese-informal','trad-chinese-formal','cjk-heavenly-stem','cjk-earthly-branch','japanese-informal','japanese-formal','arabic-indic','persian','urdu','devanagari','gurmukhi','gujarati','oriya','kannada','malayalam','bengali','tamil','telugu','thai','lao','myanmar','khmer','hangul','hangul-consonant','ethiopic-halehame','ethiopic-numeric','ethiopic-halehame-am','ethiopic-halehame-ti-er','ethiopic-halehame-ti-et','other-style','outside','inside'];
+      var html = '';
+      arr = arr.concat(arr2);
+      for (var i=0;i<arr.length;i++) {
+        var val = arr[i];
+        html += '<ul style="list-style-type:'+val+';">';
+        html += '  <li>'+val+'</li>';
+        html += '  <li>'+val+'</li>';
+        html += '  <li>'+val+'</li>';
+        html += '</ul>';
+      };
+
+      $('.demo-constant').append(html);
+
+      // 自定义的值
+      var html2 = '';
+      var arr_define = ['\'＋\'','\'×\'','\'-\'','\'>\''];
+      for (var i=0;i<arr_define.length;i++) {
+        var val = arr_define[i];
+        html2 += '<ul style="list-style-type:'+val+';">';
+        html2 += '  <li>自定义的值：'+val+'</li>';
+        html2 += '  <li>自定义的值：'+val+'</li>';
+        html2 += '  <li>自定义的值：'+val+'</li>';
+        html2 += '</ul>';
+      };
+
+      $('.demo-define').append(html2);
+
+    });
+  </script>
+  
+</body>
+</html>

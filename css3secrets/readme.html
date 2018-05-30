@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>readme</title>
+    <style>
+        /*
+        * reset.css
+        */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-size: 62.5%;
+        }
+        body {
+            width: 100%;
+            font-family: "Sans Noto", "Hiragino Sans GB", Arial, Helvetica, "微软雅黑", sans-serif;
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+            color: #000;
+        }
+
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        abbr, img, object, a img, :link img, :visited img, a object, :link object, :visited object {
+            border: 0;
+        }
+
+        address, caption, cite, code, dfn, em, th, var, i {
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0 auto;
+            padding: .8em 0;
+            width: 90%;
+            max-width: 850px;
+        }
+        ul li a{
+            display: inline-block;
+            padding: 5px 0;
+            color: #666;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            text-indent: 1em;
+        }
+        ul.current:before{
+            content: '当日更新('attr(data-time)')';
+            display: block;
+            font-size: 1.2em;
+            line-height: 1.5;
+            font-weight: bold;
+            color: #000;
+        }
+        ul.full:before{
+            content: '所有页面';
+            display: block;
+            font-size: 1.2em;
+            line-height: 1.5;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<ul class="current" data-time="1970-1-1">
+    <li>
+        <a href="readme.html">导航页</a>
+    </li>
+</ul>
+<ul class="full">
+    <li>
+        <a href="animation-along-a-circular-path.html">沿着路径的动画</a>
+    </li>
+    <li>
+        <a href="blending.html">blending混合</a>
+    </li>
+    <li>
+        <a href="blink.html">闪烁动画</a>
+    </li>
+    <li>
+        <a href="box-shadow.html">box-shadow和drop-shadow阴影</a>
+    </li>
+    <li>
+        <a href="center-of-target.html">靶心（多边框）</a>
+    </li>
+    <li>
+        <a href="circletext.html">环形文本</a>
+    </li>
+    <li>
+        <a href="ellipsis.html">文本省略号</a>
+    </li>
+    <li>
+        <a href="filter.html">filter的十种效果</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+    <li>
+        <a href="#">#</a>
+    </li>
+
+    <li>
+        <a href="#">#</a>
+    </li>
+</ul>
+<script>
+    window.onload = function () {
+        var curDate = new Date();
+        var year = curDate.getFullYear(),
+            month = curDate.getMonth()+1,
+            day = curDate.getDate();
+        document.querySelector('.current').setAttribute('data-time',year+'-'+month+'-'+day);
+    }
+</script>
+</body>
+</html>

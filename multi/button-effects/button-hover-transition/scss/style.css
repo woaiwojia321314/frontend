@@ -1,0 +1,69 @@
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #00b5f3;
+  font-family: 'Lato'; }
+
+.btn {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  background-color: #371e75;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1; }
+  .btn:before {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 50px;
+    background-color: #fff;
+    transform: rotate(10deg);
+    top: -80px;
+    left: 20%;
+    transition: .3s ease-in-out; }
+  .btn:after {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 60px;
+    background-color: #fff;
+    transform: rotate(10deg);
+    top: 80px;
+    left: -20%;
+    transition: .3s ease-in-out; }
+  .btn:hover {
+    background-color: #fff;
+    transition: 0s linear;
+    transition-delay: .3s; }
+  .btn:hover:before {
+    top: -20px;
+    left: -20%;
+    transition: .3s ease-in-out; }
+  .btn:hover:after {
+    top: 10px;
+    left: -23%;
+    transition: .3s ease-in-out; }
+  .btn:hover > .btn-content {
+    color: #04202c;
+    transition: .3s ease-in-out; }
+  .btn .btn-content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+    z-index: 999;
+    transition: .3s ease-in-out; }
+
+/*# sourceMappingURL=style.css.map */

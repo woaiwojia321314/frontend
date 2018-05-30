@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>fit-content</title>
+  <style>
+    /*
+    *reset css
+    */
+    /* 禁用iPhone中Safari的字号自动调整 */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-size: 62.5%;
+    }
+    body{
+        width: 100%;
+        background: #f5f5f5;
+        font-family: "Sans Noto", "Hiragino Sans GB", Arial, Helvetica, "微软雅黑", sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+        color: #333;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .clear-fix:after {
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+    }
+
+    .clear-fix {
+        zoom: 1;
+    }
+    /**custom css**/
+    nav ul {
+      list-style: none;
+      background: #fb3;
+      margin: 0 auto;
+    }
+    nav ul li {
+      float: left;
+      padding: .5em 1em;
+      border-right: 1px solid #58a;
+      background: #fb3;
+      font-size: 1em;
+    }
+
+    .box {
+      width: 70%;
+      height: 200px;
+      margin: 10px auto;
+      background-color: #abc;
+      resize: horizontal;
+      overflow: hidden;
+    }
+    .box p{
+      display: inline-block;
+      background: #fb3;
+      border: 1px dashed #333;
+    }
+
+    .test {
+      margin-top: 1em;
+      background: #fb3;
+      margin: 1em auto;
+    }
+    .test .bg {
+      display: inline-block;
+      width: 5em;
+      height: 1em;
+      background: #58a;
+    }
+
+    .fill-available {
+      width: -webkit-fill-available;
+      width: -moz-fill-available;
+      width: -moz-available;/* FireFox目前这个生效 */
+      width: fill-available;
+    }
+
+    .fit-content {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+    .min-content {
+      width: -webkit-min-content;
+      width: -moz-min-content;
+      width: min-content;
+    }
+
+    .max-content {
+      width: -webkit-max-content;
+      width: -max-min-content;
+      width: max-content;
+    } 
+  </style>
+</head>
+
+<body>
+  <!-- fill-available -->
+  <div class="box">
+      <p class="fill-available">
+        fill-available: 填满可用的区域。<br>
+        比如display:inline-block;的内容未达到父元素的宽度时，此值就能填满全部区域。<br>
+        个人认为：fill-available是外部尺寸；<br>
+        其余三个，都是根据内部内容来决定自己的宽度！！<br>
+        fit-content,min-content,max-content;
+      </p>
+      <p class="">
+        fill-available: 填满可用的区域。<br>
+        比如display:inline-block;的内容未达到父元素的宽度时，此值就能填满全部区域。<br>
+        个人认为：fill-available是外部尺寸；<br>
+        其余三个，都是根据内部内容来决定自己的宽度！！<br>
+        fit-content,min-content,max-content;
+      </p>
+  </div>
+  <!-- fit-content -->
+  <nav>
+    <ul class="fit-content clear-fix">
+      <li>fit-content</li>
+      <li>Lettin</li>
+      <li>Lebo</li>
+      <li>竭尽所能</li>
+      <li>APP</li>
+    </ul>
+  </nav>
+  <!-- min-content -->
+  <div class="test min-content">
+    <p class="bg"></p>
+    min-content: 以最小内容单位的宽度为标准，取最小中的较大那个，因为不能让内容单位显示不全吧。：图片（或行内元素，display:inline-block）,英文单词，中文汉字。
+  </div>
+  <!-- max-content -->
+  <div class="test max-content">
+    <p class="bg"></p>
+    max-content: 以最大内容单位的宽度为标准，取更宽那个。如果文本够宽，等于不换行（white-space:nowrap）。
+  </div>
+</body>
+</html>

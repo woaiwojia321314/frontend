@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>box-shadow阴影和drop-shadow阴影</title>
+    <style>
+        /*
+        *reset css
+        */
+        /* 禁用iPhone中Safari的字号自动调整 */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-size: 62.5%;
+        }
+        body{
+            width: 100%;
+            background: #f5f5f5;
+            font-family: "Sans Noto", "Hiragino Sans GB", Arial, Helvetica, "微软雅黑", sans-serif;
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+            color: #333;
+        }
+        .clear-fix:after {
+            content: "";
+            display: block;
+            visibility: hidden;
+            height: 0;
+            clear: both;
+        }
+
+        .clear-fix {
+            zoom: 1;
+        }
+        /**custom css**/
+        .demo > div{
+            margin: 1rem;
+            padding: 3rem 0;
+            width: 8rem;
+            display: inline-block;
+            background: #fb3;
+            text-align: center;            
+        }
+        .demo .box-shadow:nth-of-type(1){
+            box-shadow: 5px 0px 5px -5px #000;
+        }
+        .demo .box-shadow:nth-of-type(2){
+            box-shadow: -5px 0px 5px -5px #000;
+        }
+        .demo .box-shadow:nth-of-type(3){
+            box-shadow: 0px 5px 5px -5px #000;
+        }
+        .demo .box-shadow:nth-of-type(4){
+            box-shadow: -5px 0px 5px -5px #000,
+                        5px 0px 5px -5px #000;
+        }
+        .demo .box-shadow:nth-of-type(5){
+            box-shadow: -5px 0px 5px -5px #000,
+                        5px 0px 5px -5px #000,
+                        0px 5px 5px -5px #000;
+        }
+        .demo .box-shadow:nth-of-type(6){
+            box-shadow: 0px 0px 5px 0px #000;
+        }
+        .demo .box-shadow:nth-of-type(7){
+            box-shadow: 0px 5px 0px 0px #000;
+        }
+        .demo .box-shadow:nth-of-type(8){
+            box-shadow: inset -5px 0px 0px 0px #000,
+                        inset 5px 0px 0px 0px #000,
+                        inset 0px -5px 0px 0px #000,
+                        inset 0px 5px 0px 0px #000;
+        }
+        .demo .box-shadow:nth-of-type(9){
+            box-shadow: inset 0px 0px 5px 0px #000;
+        }
+        /*filter:drop-shadow(...);*/
+        .demo .tip:before {
+            content: '';
+            position: absolute;
+            top: 1em;
+            right: -.7em;
+            width: 0;
+            height: 0;
+            border: 1em solid transparent;
+            border-left-color: #fb3;
+            border-right-width: 0;
+        }
+        .demo .drop-shadow{
+            position: relative;
+            -webkit-filter: drop-shadow(.1em .1em .1em rgba(0,0,0,.5));
+            filter: drop-shadow(.1em .1em .1em rgba(0,0,0,.5));
+        }
+        .demo .drop-shadow.dotted {
+            background: transparent;
+            border: .3em dotted #fb3;
+        }
+    </style>
+</head>
+<body>
+<section class="wrapper">
+    <div class="con">
+        <a href="https://www.w3cplus.com/content/css3-box-shadow">（规则图形阴影）box-shadow阴影语法相关介绍</a><br>
+        <a href="http://www.w3cplus.com/css3/ten-effects-with-css3-filter">（不规则图形阴影）drop-shadow阴影语法相关介绍</a>
+    </div>
+    <div class="demo">
+        <h5>box-shadow demo</h5>
+        <div class="box-shadow">右</div>
+        <div class="box-shadow">左</div>
+        <div class="box-shadow">下</div>
+        <div class="box-shadow">左右</div>
+        <div class="box-shadow">左右下</div>
+        <div class="box-shadow">全阴影</div>
+        <div class="box-shadow">下边框</div>
+        <div class="box-shadow">全边框</div>
+        <div class="box-shadow">内阴影</div>
+        <div class="drop-shadow tip">不规则阴影</div>
+        <div class="drop-shadow dotted">不规则阴影</div>
+    </div>
+</section>
+</body>
+</html>
